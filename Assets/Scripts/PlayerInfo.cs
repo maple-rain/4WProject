@@ -8,7 +8,7 @@ public class PlayerInfo : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI name;
-    private TMP_InputField nameInputField;
+    
 
     private void Awake()
     {
@@ -17,8 +17,7 @@ public class PlayerInfo : MonoBehaviour
 
     public void PrintName()
     {
-        string playerName = nameInputField.text;
-        name.text = PlayerPrefs.GetString("PlayerName", playerName);
+        name.text = PlayerPrefs.GetString("PlayerName");
     }
     
 }
